@@ -30,6 +30,9 @@ abstract contract Store is ERC1155, Ownable {
         require(balanceOf(msg.sender, _id) - redeemed[_id][msg.sender] >= 1, "not enough balance");
         redeemed[_id][msg.sender] += 1;
     }
+    function getRedeemedBalance(address _owner, uint256 _id) public view returns(uint256) {
+        return redeemed[_id][_owner];
+    }
 
     function _beforeTokenTransfer(
         address _operator,
