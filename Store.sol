@@ -16,5 +16,9 @@ contract Store is ERC1155, ERC1155Burnable {
 
         name = _name;
     }
-    function uri
+
+    // TODO: implement URI here
+    function uri(uint256 id) override public view returns (string memory) {
+        return "";
+    }
 }

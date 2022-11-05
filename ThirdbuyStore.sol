@@ -44,4 +44,6 @@ contract ThirdbuyStore is Store {
             }
         }
     }
+
+    // TODO: add force transfer from shop here
 }
