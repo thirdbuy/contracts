@@ -1,13 +1,13 @@
-# Sample Hardhat Project
+# Thirdbuy Contracts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Thirdbuy's prebuilt decentralized commerce smart contracts.
 
-Try running some of the following tasks:
+These contracts are modular and extendable, and designed to work perfectly with Thirdbuy's marketplace.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+## Documentation
+
+Usage of Thirdbuy's contracts is described further in Thirdbuy's SDK documentation, which is available at [docs.thirdbuy.com](https://docs.thirdbuy.com/).
+
+## License
+
+Thirdbuy's contracts are currently unlicensed.
