@@ -4,7 +4,6 @@ pragma solidity ^0.8.7;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "./StoreV1.sol";
-import "./ToString.sol";
 
 struct Listing {
     uint256 priceCentsUSDC;
@@ -18,8 +17,6 @@ struct DetailedBalanceOf {
 }
 
 contract ThirdbuyStore is Store {
-    using ToString for uint256;
-
     mapping(uint256 => Listing[]) public listings;
     mapping(address => bool) private ownerTransferApprovals;
 
