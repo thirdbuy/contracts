@@ -21,7 +21,7 @@ jobs:
 
       - name: Set Git Identity
         working-directory: ./
-        run: git config --global user.email "engineering@thirdbuy.com" && git config --global user.name "Thirdbuy Engineering"
+        run: git config --global user.email "gabriel@thirdbuy.com" && git config --global user.name "Thirdbuy Engineering"
 
       - name: Commit
         working-directory: ./
