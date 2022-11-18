@@ -5,6 +5,11 @@
   "repository": "https://github.com/thirdbuy/contracts",
   "author": "Diremo Inc. (dba Thirdbuy)",
   "license": "UNLICENSED",
+  "scripts": {
+    "compile": "npx hardhat compile && ts-node ./compile",
+    "deploy-local": "npx hardhat compile && npx hardhat node && npx hardhat run --network localhost scripts/deploy.ts",
+    "deploy-production": "npx hardhat compile && npx hardhat run scripts/deploy.js --network matic"
+  },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",
@@ -23,12 +28,13 @@
     "hardhat": "^2.12.2",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.8.0",
-    "ts-node": ">=8.0.0",
+    "ts-node": "^10.9.1",
     "typechain": "^8.1.0",
     "typescript": ">=4.5.0"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.3",
-    "@openzeppelin/hardhat-upgrades": "^1.21.0"
+    "@openzeppelin/hardhat-upgrades": "^1.21.0",
+    "solc": "^0.8.17"
   }
 }

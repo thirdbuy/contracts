@@ -1,0 +1,28 @@
+name: Compile Contracts
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, 'release:')"
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install
+        working-directory: ./
+        run: yarn install
+
+      - name: Compile
+        working-directory: ./
+        run: yarn compile
+
+      - name: Version Bump
+        working-directory: ./
+        run: npm version patch -m "release: %s"
+      
+      - name: Commit
+        working-directory: ./
+        run: git push
