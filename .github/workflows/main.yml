@@ -25,7 +25,7 @@ jobs:
 
       - name: Commit
         working-directory: ./
-        run: git add -A && git commit -am '[release] compile contracts'
+        run: git diff --exit-code || git commit -am '[release] compile contracts'
 
       - name: Version Bump
         working-directory: ./
