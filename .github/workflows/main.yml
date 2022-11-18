@@ -19,6 +19,10 @@ jobs:
         working-directory: ./
         run: yarn compile
 
+      - name: Set Git Identity
+        working-directory: ./
+        run: git config --global user.email "engineering@thirdbuy.com" && git config --global user.name "Thirdbuy Engineering"
+
       - name: Commit
         working-directory: ./
         run: git add -A && git commit -am '[compile] contract code'
