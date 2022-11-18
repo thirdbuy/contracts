@@ -21,3 +21,5 @@ typechain-types
 cache
 artifacts
 
+#Yarn
+yarn-error.log
