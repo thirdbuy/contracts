@@ -1,4 +1,4 @@
-# Thirdbuy Contracts
+# Decentralized Commerce Contracts
 
 Thirdbuy's prebuilt decentralized commerce smart contracts.
 
