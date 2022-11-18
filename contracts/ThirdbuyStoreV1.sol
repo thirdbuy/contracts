@@ -10,6 +10,7 @@ struct Listing {
     uint256 amount;
     address owner;
 }
+
 struct DetailedBalanceOf {
     uint256 available;
     uint256 redeemed;
