@@ -19,10 +19,14 @@ jobs:
         working-directory: ./
         run: yarn compile
 
+      - name: Commit
+        working-directory: ./
+        run: git add -A && git commit -am '[compile] contract code'
+
       - name: Version Bump
         working-directory: ./
         run: npm version patch -m "[release] %s"
 
-      - name: Commit
+      - name: Push
         working-directory: ./
         run: git push
