@@ -1,11 +1,11 @@
 name: Compile Contracts
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     if: "!startsWith(github.event.head_commit.message, 'release:')"
     steps:
@@ -22,7 +22,7 @@ jobs:
       - name: Version Bump
         working-directory: ./
         run: npm version patch -m "release: %s"
-      
+       
       - name: Commit
         working-directory: ./
         run: git push
